@@ -6,7 +6,7 @@
 #include <linux/unistd.h>
 #include <linux/syscalls.h>
 
-SYSCALL_DEFINE3(mycall, int, int, b, int*, to_user){
+SYSCALL_DEFINE3(mycall, int, a,int, b, int*, to_user){
     int sum=0;
     printk("MY KERNEL MESSAGE =a%d,b=%d\n",a,b);
     sum=a+b;
